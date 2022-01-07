@@ -14,20 +14,7 @@ function menorMayor(numeros) {
 
     // Tu código aca:
 
-    var newarray = [];
-    var numBigger = numeros[0];
-    var numLess = numeros[0];
-    for (var i = 1; i < numeros.length; i++) {
-        if (numeros[i] > numBigger) {
-            numBigger = numeros[i]
-        }
-        if (numeros[i] < numLess) {
-            numLess = numeros[i]
-        }
-    }
-    newarray.push(numLess);
-    newarray.push(numBigger);
-    return newarray;
+
 }
 
 function stringMasLarga(strings) {
@@ -38,15 +25,7 @@ function stringMasLarga(strings) {
     // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
     // Tu código aca
-    var stringLarge = strings[0];
-    var string = '';
-    for (let i = 1; i < strings.length; i++) {;
-        string = strings[i].replace("\\s", "");
-        if (string.length > stringLarge.length) {
-            stringLarge = strings[i];
-        }
-    }
-    return stringLarge;
+   
 }
 
 function buscarAmigo(amigos, nombre) {
@@ -59,12 +38,7 @@ function buscarAmigo(amigos, nombre) {
     //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
 
     // Tu código aca:
-    for (let i = 0; i < amigos.length; i++) {
-        if (nombre === amigos[i].nombre) {
-            return amigos[i];
-        }
-    }
-
+ 
 }
 
 function sumArray(array, n) {
@@ -83,21 +57,7 @@ function sumArray(array, n) {
 
     // Tu código aca:
 
-    for (let i = 0; i < array.length; i++) {
-        for (let x = 1; x < array.length; x++) {
-            if (n === array[i] + array[i]) {
-                return false;
-            } else
-            if (n === (array[i] + array[x])) {
-
-                return true;
-
-            }
-
-        }
-
-
-    }
+   
 
     return false;
 
@@ -115,12 +75,7 @@ function pluck(array, propiedad) {
 
     // Tu código acá:
 
-    let newArray = array.map(function(array) {
-        return array[propiedad]
-    });
-
-    return newArray;
-
+   
 }
 
 
@@ -134,10 +89,7 @@ function crearClasePersona() {
             // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
             // Tu código aca:
-            this.nombre = nombre;
-            this.edad = edad;
-            this.hobbies = hobbies;
-            this.amigos = amigos;
+          
         }
 
         addFriend(nombre, edad) {
@@ -147,8 +99,6 @@ function crearClasePersona() {
 
             // Tu código aca:
 
-            var persona = new Persona(nombre, edad);
-            this.amigos.push(persona);
         }
 
         addHobby(hobby) {
@@ -157,7 +107,6 @@ function crearClasePersona() {
 
             // Tu código aca:
 
-            this.hobbies.push(hobby);
         }
         getFriends() {
             // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
@@ -168,10 +117,7 @@ function crearClasePersona() {
 
             // Tu código aca:
 
-            let nombreamigo = ((amigos) => amigos.nombre);
-            let newarray = this.amigos.map(nombreamigo);
-            return (newarray);
-
+           
         }
 
         getHobbies() {
@@ -181,7 +127,7 @@ function crearClasePersona() {
 
             // Tu código aca:
 
-            return this.hobbies;
+            
 
         }
 
@@ -201,8 +147,7 @@ function crearClasePersona() {
             // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
             // Tu código aca:
-            var sumaedad = this.amigos.reduce((acum, sgte) => acum + sgte.edad, 0) / this.amigos.length
-            return sumaedad;
+           
         }
     };
 
@@ -236,18 +181,6 @@ function filtrar(funcion) {
     // }) => [{price: 100, name:'tv'}]
 
 
-    Array.prototype.filtrar = function(callback) {
-
-        let arraynew = [];
-
-        for (let i = 0; i < this.length; i++) {
-
-            const x = callback(this[i]);
-
-            if (x) arraynew.push(this[i]);
-        }
-        return arraynew;
-    };
 
 };
 
